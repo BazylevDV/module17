@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-
 # Схема для создания пользователя
 class CreateUser(BaseModel):
     username: str
@@ -8,20 +7,18 @@ class CreateUser(BaseModel):
     lastname: str
     age: int
 
-
 # Схема для обновления пользователя
 class UpdateUser(BaseModel):
     firstname: str
     lastname: str
     age: int
 
-
 # Схема для создания задачи
 class CreateTask(BaseModel):
     title: str
     content: str
     priority: int
-
+    user_id: int
 
 # Схема для обновления задачи
 class UpdateTask(BaseModel):
